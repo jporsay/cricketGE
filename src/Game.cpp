@@ -12,6 +12,6 @@ bool Game::initialize() {
     return false;
 }
 
-~Game::Game() {
+Game::~Game() {
 
 }
