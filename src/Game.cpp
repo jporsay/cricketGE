@@ -1,5 +1,4 @@
 #include "Game.hpp"
-#include <SFML/Graphics.hpp>
 
 Game::Game() {
 
