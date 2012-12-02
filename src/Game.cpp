@@ -1,15 +1,26 @@
 #include "Game.hpp"
+#include <SFML/Graphics.hpp>
 
 Game::Game() {
 
 }
 
-void Game::run() {
-
+bool Game::initialize() {
+    return true;
 }
 
-bool Game::initialize() {
-    return false;
+void Game::run() {
+    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML win");
+    while (window.isOpen()) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+        window.clear();
+        window.display();
+    }
 }
 
 Game::~Game() {

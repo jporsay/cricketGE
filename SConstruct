@@ -1,11 +1,20 @@
-bin = "bin/"
-includes = "include"
-libs = "/libs"
+platform = ARGUMENTS.get('platform', 'osx')
 
+binDir = "bin"
+includeDir = "include"
+libDir = "#libs/" + platform
+srcDir = "src"
+
+libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
+
+VariantDir(binDir, srcDir, duplicate = 0)
 env = Environment(
-    BINDIR = bin,
-    LIBDIR = libs,
-    CPPPATH = includes
+    BINDIR = binDir,
+    LIBDIR = libDir,
+    CPPPATH = includeDir,
+    LIBPATH = libDir,
+    LIBS = libs
 )
-env.Repository("src/")
-env.Program('bin/tinyWings', Glob('*.cpp'))
+env.Repository(srcDir)
+
+env.Program(binDir + '/tinyWings', Glob('*.cpp'))
