@@ -7,7 +7,6 @@ srcDir = "src"
 
 libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
 
-VariantDir(binDir, srcDir, duplicate = 0)
 env = Environment(
     BINDIR = binDir,
     LIBDIR = libDir,
