@@ -2,7 +2,7 @@ platform = ARGUMENTS.get('platform', 'osx')
 
 binDir = "bin"
 includeDir = "include"
-libDir = "#libs/" + platform
+libDir = "libs/" + platform
 srcDir = "src"
 
 libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
