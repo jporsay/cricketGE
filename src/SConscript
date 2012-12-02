@@ -1,6 +1,24 @@
+import os
+
+#Helper functions
+
+def getSources(rootPath):
+    sources = []
+    for dir in getAllSubdirs(rootPath, []):
+        sources += Glob(dir)
+    return sources
+
+def getAllSubdirs(rootPath, dirs):
+    dirs.append(os.path.join(rootPath, "*.cpp"))
+    for name in os.listdir(rootPath):
+        if os.path.isdir(os.path.join(rootPath, name)) and name[0] != '.':
+            getAllSubdirs(os.path.join(rootPath, name), dirs)
+    return dirs
+
+# SCons config
 platform = ARGUMENTS.get('platform', 'osx')
 
-includeDir = ["include", "#/include"]
+includeDir = "#/include"
 libDir = "#/libs/" + platform
 srcDir = "src"
 
@@ -12,4 +30,7 @@ env = Environment(
     LIBPATH = libDir,
     LIBS = libs
 )
-env.Program('tinyWings', Glob('*.cpp'))
+
+# Since we are in bin directory, path should be ../src
+sources = getSources('../src')
+env.Program('tinyWings', sources)
