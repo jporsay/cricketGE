@@ -5,23 +5,30 @@ Game::Game() {
 }
 
 bool Game::initialize() {
+    _window = new graphics::Window(800, 600, "Minute Wings");
     return true;
 }
 
 void Game::run() {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML win");
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
+    while (_window->isOpen()) {
+        if (_window->handleEvents()) {
+            this->update();
+        } else {
+            this->shutDown();
         }
-        window.clear();
-        window.display();
+        _window->clear();
+        _window->display();
     }
 }
 
-Game::~Game() {
+void Game::update() {
 
+}
+
+void Game::shutDown() {
+    _window->close();
+}
+
+Game::~Game() {
+    delete _window;
 }
