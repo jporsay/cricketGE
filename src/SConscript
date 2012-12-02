@@ -1,0 +1,15 @@
+platform = ARGUMENTS.get('platform', 'osx')
+
+includeDir = ["include", "#/include"]
+libDir = "#/libs/" + platform
+srcDir = "src"
+
+libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
+
+env = Environment(
+    LIBDIR = libDir,
+    CPPPATH = includeDir,
+    LIBPATH = libDir,
+    LIBS = libs
+)
+env.Program('tinyWings', Glob('*.cpp'))
