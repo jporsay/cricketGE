@@ -16,13 +16,15 @@ def getAllSubdirs(rootPath, dirs):
     return dirs
 
 # SCons config
-platform = ARGUMENTS.get('platform', 'osx')
+platform = ARGUMENTS.get('platform', 'linux')
 
 includeDir = "#/include"
 libDir = "#/libs/" + platform
 srcDir = "src"
-
-libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
+if platform == 'linux':
+    libs = ['sfml-graphics-s', 'sfml-window-s', 'sfml-system-s', 'GLEW', 'pthread', 'jpeg', 'freetype', 'Xrandr', 'rt']
+else:    
+    libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
 
 env = Environment(
     LIBDIR = libDir,
@@ -31,6 +33,8 @@ env = Environment(
     LIBS = libs
 )
 
+if platform == 'linux':
+    env.Append(CCFLAGS='-DSFML_STATIC')
 # Since we are in bin directory, path should be ../src
 sources = getSources('../src')
 env.Program('tinyWings', sources)
