@@ -11,18 +11,17 @@ bool Game::initialize() {
 
 void Game::run() {
     while (_window->isOpen()) {
-        if (_window->handleEvents()) {
-            this->update();
-        } else {
+        if (!_window->handleEvents()) {
             this->shutDown();
         }
-        _window->clear();
-        _window->display();
+        this->update();
     }
 }
 
 void Game::update() {
-
+    _window->clear();
+    // draw stuff
+    _window->display();
 }
 
 void Game::shutDown() {

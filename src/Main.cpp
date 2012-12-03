@@ -5,6 +5,6 @@ int main(int argc, char const *argv[]) {
     if (!game->initialize()) {
         return 1;
     }
-    game->run(); 
+    game->run();
     return 0;
 }
