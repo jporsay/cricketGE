@@ -1,4 +1,4 @@
-
+#pragma once
 namespace system {
 
 class ISystem {
