@@ -1,7 +1,8 @@
+#pragma once
 namespace system {
 
-#define TYPE_WINDOW 1
-#define TYPE_GRAPHICS 2
-#define TYPE_SOUND 3
+const short TYPE_WINDOW = 1;
+const short TYPE_GRAPHICS = 2;
+const short TYPE_SOUND = 3;
 
 }
