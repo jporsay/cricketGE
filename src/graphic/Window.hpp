@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-namespace graphics {
+namespace graphic {
 
 class Window {
 private:

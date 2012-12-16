@@ -1,6 +1,6 @@
 #include "Window.hpp"
 
-namespace graphics {
+namespace graphic {
 
 Window::Window(int width, int height, std::string title) {
     _window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
@@ -22,9 +22,6 @@ void Window::clear() {
 }
 
 void Window::display() {
-    sf::CircleShape shape(100.0f);
-    shape.setFillColor(sf::Color::Green);
-    _window->draw(shape);
     _window->display();
 }
 
