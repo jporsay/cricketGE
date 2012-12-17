@@ -5,7 +5,7 @@ Game::Game() {
 }
 
 bool Game::initialize() {
-    _window = new graphics::Window(800, 600, "Minute Wings");
+    _window = new graphic::Window(800, 600, "Minute Wings");
     return true;
 }
 
