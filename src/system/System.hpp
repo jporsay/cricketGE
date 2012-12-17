@@ -1,11 +1,11 @@
 #pragma once
 namespace system {
 
-class ISystem {
+class System {
 private:
 	short type;
 public:
-	explicit ISystem(short sType) { type = sType; }
+	explicit System(short sType) { type = sType; }
     short getType() const { return type; }
     virtual bool initialize() = 0;
     virtual bool update() = 0;

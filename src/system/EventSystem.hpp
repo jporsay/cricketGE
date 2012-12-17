@@ -1,9 +1,9 @@
 #pragma once
-#include "ISystem.hpp"
+#include "System.hpp"
 
 namespace system {
 
-class EventSystem : public ISystem {
+class EventSystem : public System {
 
 };
 

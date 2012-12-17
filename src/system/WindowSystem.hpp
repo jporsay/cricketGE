@@ -1,11 +1,11 @@
 #pragma once
-#include "ISystem.hpp"
+#include "System.hpp"
 
 namespace system {
 
 class EventSystem;
 
-class WindowSystem : public ISystem {
+class WindowSystem : public System {
 private:
 
 public:
