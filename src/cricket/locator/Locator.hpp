@@ -18,7 +18,9 @@ public:
         return *service;
     }
     virtual ~Locator() {
-        delete service;
+        if (service != &nullService) {
+            delete service;
+        }
     }
 private:
     Locator();
