@@ -17,10 +17,14 @@ void Game::run() {
             this->shutDown();
         }
         this->update();
+        this->draw();
     }
 }
 
 void Game::update() {
+}
+
+void Game::draw() {
     _window->clear();
     // draw stuff
     _window->display();

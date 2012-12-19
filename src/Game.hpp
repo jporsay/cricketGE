@@ -10,5 +10,6 @@ public:
     bool initialize();
     void run();
     void update();
+    void draw();
     void shutDown();
 };
