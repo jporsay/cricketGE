@@ -1,3 +1,4 @@
+#pragma once
 #include "Sound.hpp"
 namespace sound {
 
