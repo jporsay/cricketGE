@@ -1,11 +1,13 @@
 #include "Game.hpp"
-
+#include "sound/Locator.hpp"
 Game::Game() {
 
 }
 
 bool Game::initialize() {
     _window = new graphic::Window(800, 600, "Minute Wings");
+    sound::Locator::initialize();
+    sound::Locator::get().play();
     return true;
 }
 
