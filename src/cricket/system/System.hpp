@@ -3,9 +3,9 @@ namespace system {
 
 class System {
 private:
-	short type;
+    short type;
 public:
-	explicit System(short sType) { type = sType; }
+    explicit System(short sType) { type = sType; }
     short getType() const { return type; }
     virtual bool initialize() = 0;
     virtual bool update() = 0;

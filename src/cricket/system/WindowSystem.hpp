@@ -2,9 +2,7 @@
 #include "System.hpp"
 
 namespace system {
-
-class EventSystem;
-
+    
 class WindowSystem : public System {
 public:
     virtual bool isOpen() = 0;
