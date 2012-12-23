@@ -1,7 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "../event/Event.hpp"
 
-namespace graphic {
+namespace window {
 
 class Window {
 private:
@@ -10,7 +11,7 @@ public:
     Window(int width, int height, std::string title);
     ~Window();
     bool isOpen() { return _window->isOpen(); }
-    bool handleEvents();
+    event::Event getEvent();
     void clear();
     void display();
     void close();

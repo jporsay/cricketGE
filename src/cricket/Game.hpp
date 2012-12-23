@@ -1,9 +1,9 @@
 #pragma once
-#include "graphic/Window.hpp"
+#include "window/Window.hpp"
 
 class Game {
 private:
-    graphic::Window* _window;
+    window::Window* _window;
 public:
     explicit Game();
     ~Game();
