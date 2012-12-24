@@ -17,6 +17,15 @@ bool Window::handleEvents() {
     return true;
 }
 
+event::Event* Window::getEvent() {
+    sf::Event event;
+    if (_window->pollEvent(event)) {
+        // build newEvent with event;
+        // return newEvent;
+    }
+    return 0;
+}
+
 void Window::clear() {
     _window->clear();
 }

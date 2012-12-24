@@ -11,7 +11,8 @@ public:
     Window(int width, int height, std::string title);
     ~Window();
     bool isOpen() { return _window->isOpen(); }
-    event::Event getEvent();
+    bool handleEvents();
+    event::Event *getEvent();
     void clear();
     void display();
     void close();
