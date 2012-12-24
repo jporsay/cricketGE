@@ -6,7 +6,7 @@
 namespace event {
 
 class CloseEvent : public Event {
-    CloseEvent() : Event(TYPE_CLOSE) {}
+    CloseEvent() : Event(EventType::TYPE_CLOSE) {}
 };
 
 }
