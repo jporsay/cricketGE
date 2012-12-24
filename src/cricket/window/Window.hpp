@@ -2,15 +2,17 @@
 
 #include <string>
 
-#include "../event/Event.hpp"
+#include "../event/EventBuilder.hpp"
 
 namespace window {
 
+template <class T>
 class Window {
 private:
     int width;
     int height;
     std::string title;
+    event::EventBuilder<T>* eventBuilder;
 public:
     Window(int w, int h, std::string t) : 
         width(w),
@@ -24,6 +26,14 @@ public:
     virtual void display() = 0;
     virtual void close() = 0;
     virtual void pumpEvents() = 0;
+
+    void setEventBuilder(event::EventBuilder<T> *builder) {
+        eventBuilder = builder;
+    }
+
+    event::EventBuilder<T>* getEventBuilder() {
+        return eventBuilder;
+    }
 
     const int getWidth() const {
         return width;
