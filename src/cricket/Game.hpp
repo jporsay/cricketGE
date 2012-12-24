@@ -1,5 +1,5 @@
 #pragma once
-#include "window/Window.hpp"
+#include "window/SFMLWindow.hpp"
 
 class Game {
 private:

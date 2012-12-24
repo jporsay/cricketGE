@@ -5,7 +5,7 @@ Game::Game() {
 }
 
 bool Game::initialize() {
-    _window = new window::Window(800, 600, "Minute Wings");
+    _window = new window::SFMLWindow(800, 600, "Minute Wings");
     sound::Locator::initialize();
     sound::Locator::get().play();
     return true;
@@ -13,9 +13,9 @@ bool Game::initialize() {
 
 void Game::run() {
     while (_window->isOpen()) {
-        if (!_window->handleEvents()) {
-            this->shutDown();
-        }
+//        if (!_window->handleEvents()) {
+//           this->shutDown();
+//        }
         this->update();
         this->draw();
     }
