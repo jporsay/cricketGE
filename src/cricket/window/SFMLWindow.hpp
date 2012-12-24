@@ -3,10 +3,11 @@
 #include <SFML/Graphics.hpp>
 
 #include "Window.hpp"
+#include "SFMLEventBuilder.hpp"
 
 namespace window {
 
-class SFMLWindow : public Window {
+class SFMLWindow : public Window<sf::Event> {
 private:
     sf::RenderWindow* _window;
 public:
