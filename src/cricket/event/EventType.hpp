@@ -2,7 +2,13 @@
 
 namespace event {
 
-const short TYPE_CLOSE = 1;
-const short TYPE_KEYBOARD = 2;
+class EventType {
+public:
+    enum {
+        TYPE_CLOSE,
+        TYPE_KEYBOARD,
+        LAST
+    };
+};
 
 }
