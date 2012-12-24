@@ -11,7 +11,7 @@ private:
     Key key;
     State state;
 public:
-    KeyboardEvent() : event::Event(event::EventType::TYPE_KEYBOARD) {}
+    KeyboardEvent() : event::Event(event::EventType::KEYBOARD) {}
     Key getKey() { return key; }
     void setKey(Key k) { key = k; }
     State getState() { return state; }
