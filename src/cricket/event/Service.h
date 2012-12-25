@@ -3,6 +3,7 @@
 #include <list>
 #include <map>
 #include <string>
+#include <typeinfo>
 
 #include "Event.h"
 #include "Notifiable.h"
@@ -25,7 +26,7 @@ public:
         return *service;
     }
     void publish(const Event &e);
-    void subscribe(std::string eventType, Notifiable *subscriber);
+    void subscribe(const std::type_info &eventType, Notifiable *subscriber);
 };
 
 }

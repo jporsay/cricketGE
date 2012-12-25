@@ -15,12 +15,12 @@ void Service::publish(const Event &e) {
     }
 }
 
-void Service::subscribe(std::string eventType, Notifiable *subscriber) {
-    subscriber_map::iterator subscribers = subscriberMap.find(eventType);
+void Service::subscribe(const std::type_info &eventType, Notifiable *subscriber) {
+    subscriber_map::iterator subscribers = subscriberMap.find(eventType.name());
     subscriber_list *list;
     if (subscribers == subscriberMap.end()) {
         list = new subscriber_list();
-        subscriberMap.insert(std::pair<std::string, subscriber_list*>(eventType, list));
+        subscriberMap.insert(std::pair<std::string, subscriber_list*>(eventType.name(), list));
     } else {
         list = subscribers->second;
     }
