@@ -17,7 +17,8 @@ public:
     Window(int w, int h, std::string t) : 
         width(w),
         height(h),
-        title(t)
+        title(t),
+        eventBuilder(0)
     {}
 
     virtual bool initialize() = 0;
