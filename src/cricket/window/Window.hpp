@@ -20,6 +20,7 @@ public:
         title(t)
     {}
 
+    virtual bool initialize() = 0;
     virtual bool isOpen() const = 0;
     virtual const event::Event *getEvent() const = 0;
     virtual void clear() = 0;
