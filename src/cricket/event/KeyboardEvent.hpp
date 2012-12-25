@@ -2,9 +2,11 @@
 
 #include "../event/Event.hpp"
 #include "../event/EventType.hpp"
-#include "Keys.hpp"
+#include "../keyboard/Keys.hpp"
 
-namespace keyboard {
+namespace event {
+
+using namespace keyboard;
 
 class KeyboardEvent : public event::Event {
 private:
