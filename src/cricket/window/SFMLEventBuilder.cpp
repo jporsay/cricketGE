@@ -1,10 +1,9 @@
 #include "SFMLEventBuilder.h"
 
-#include "../event/ClosedEvent.h"
-#include "../event/KeyboardEvent.h"
-#include "../event/EmptyEvent.h"
-
-#include "../keyboard/Keys.h"
+#include <cricket/event/ClosedEvent.h>
+#include <cricket/event/KeyboardEvent.h>
+#include <cricket/event/EmptyEvent.h>
+#include <cricket/keyboard/Keys.h>
 
 namespace event {
 

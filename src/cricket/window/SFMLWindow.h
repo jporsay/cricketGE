@@ -2,7 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Window.h"
+#include <cricket/window/Window.h>
 #include "SFMLEventBuilder.h"
 
 namespace window {

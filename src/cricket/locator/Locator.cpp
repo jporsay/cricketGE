@@ -1,4 +1,4 @@
-#include "Locator.h"
+#include <cricket/locator/Locator.h>
 
 namespace locator {
 

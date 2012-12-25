@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../event/EventBuilder.h"
+#include <cricket/event/EventBuilder.h>
 #include <SFML/Window/Event.hpp>
 
 namespace event {

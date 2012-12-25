@@ -1,5 +1,5 @@
 #include "SFMLWindow.h"
-#include "../event/Service.h"
+#include <cricket/event/Service.h>
 #include "SFMLEventBuilder.h"
 
 namespace window {

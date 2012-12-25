@@ -2,8 +2,8 @@
 
 #include <SFML/Window/Keyboard.hpp>
 
-#include "KeyMapper.h"
-#include "Keys.h"
+#include <cricket/keyboard/KeyMapper.h>
+#include <cricket/keyboard/Keys.h>
 
 namespace keyboard {
 

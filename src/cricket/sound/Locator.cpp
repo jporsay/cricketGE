@@ -1,6 +1,6 @@
-#include "Locator.h"
-#include "Sound.h"
-#include "NullSound.h"
+#include <cricket/locator/Locator.h>
+#include <cricket/sound/Sound.h>
+#include <cricket/sound/NullSound.h>
 
 namespace locator {
 

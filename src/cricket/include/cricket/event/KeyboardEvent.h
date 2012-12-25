@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../event/Event.h"
-#include "../event/EventType.h"
+#include "./Event.h"
+#include "./EventType.h"
 #include "../keyboard/Keys.h"
 
 namespace event {

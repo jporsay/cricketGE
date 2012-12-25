@@ -1,4 +1,4 @@
-#include "NullSound.h"
+#include <cricket/sound/NullSound.h>
 
 namespace sound {
 
