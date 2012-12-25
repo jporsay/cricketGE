@@ -3,9 +3,9 @@
 
 class Game {
 private:
-    window::Window* _window;
+    window::Window<sf::Event>* window;
 public:
-    explicit Game();
+    explicit Game() {};
     ~Game();
     bool initialize();
     void run();

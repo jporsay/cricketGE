@@ -1,21 +1,17 @@
 #include "Game.hpp"
 #include "sound/Locator.hpp"
-Game::Game() {
-
-}
 
 bool Game::initialize() {
-    _window = new window::SFMLWindow(800, 600, "Minute Wings");
+    window = new window::SFMLWindow(800, 600, "Cricket GE");
+    window->initialize();
     sound::Locator::initialize();
     sound::Locator::get().play();
     return true;
 }
 
 void Game::run() {
-    while (_window->isOpen()) {
-//        if (!_window->handleEvents()) {
-//           this->shutDown();
-//        }
+    while (window->isOpen()) {
+        window->pumpEvents();
         this->update();
         this->draw();
     }
@@ -25,15 +21,15 @@ void Game::update() {
 }
 
 void Game::draw() {
-    _window->clear();
+    window->clear();
     // draw stuff
-    _window->display();
+    window->display();
 }
 
 void Game::shutDown() {
-    _window->close();
+    window->close();
 }
 
 Game::~Game() {
-    delete _window;
+    delete window;
 }
