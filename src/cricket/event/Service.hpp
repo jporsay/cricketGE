@@ -3,6 +3,7 @@
 #include <list>
 #include <map>
 #include <string>
+#include <type_info>
 
 #include "Event.hpp"
 #include "Notifiable.hpp"
