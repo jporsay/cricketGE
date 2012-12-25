@@ -33,7 +33,7 @@ public:
         eventBuilder = builder;
     }
 
-    event::EventBuilder<T>* getEventBuilder() {
+    const event::EventBuilder<T>* getEventBuilder() const {
         return eventBuilder;
     }
 
