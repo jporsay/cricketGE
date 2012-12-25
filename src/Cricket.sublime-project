@@ -15,7 +15,8 @@
     {
         "sublimeclang_options":
         [
-            "-I${folder:${project_path:Game.cpp}}/include"
+            "-I${project_folder:0}/include",
+            "-I${project_folder:1}/include"
         ]
     }
 }
