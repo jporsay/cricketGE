@@ -4,7 +4,7 @@ namespace event {
 
 class EventType {
 public:
-    enum {
+    enum Type {
         EMPTY,
         CLOSE,
         KEYBOARD,
