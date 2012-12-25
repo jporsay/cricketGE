@@ -1,7 +1,8 @@
 #pragma once
 #include "window/SFMLWindow.h"
+#include "event/Notifiable.h"
 
-class Game {
+class Game : public event::Notifiable {
 private:
     window::Window<sf::Event>* window;
 public:
@@ -12,4 +13,5 @@ public:
     void update();
     void draw();
     void shutDown();
+    bool notify(const event::Event& e);
 };
