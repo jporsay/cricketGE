@@ -1,22 +1,27 @@
 #include "SFMLWindow.h"
+#include "../event/Service.h"
+#include "SFMLEventBuilder.h"
 
 namespace window {
 
 bool SFMLWindow::initialize() {
     _window = new sf::RenderWindow(sf::VideoMode(this->getWidth(), this->getHeight()), this->getTitle(), sf::Style::Close | sf::Style::Titlebar);
     _window->setVerticalSyncEnabled(true);
+    this->setEventBuilder(new event::SFMLEventBuilder());
     return true;
 }
 
 void SFMLWindow::pumpEvents() {
-    
+    const event::Event* event;
+    while ((event = getEvent())) {
+        event::Service::get().publish(*event);
+    }
 }
 
 const event::Event* SFMLWindow::getEvent() const {
     sf::Event event;
     if (_window->pollEvent(event)) {
-        // build newEvent with event;
-        // return newEvent;
+        return getEventBuilder()->build(&event);
     }
     return 0;
 }
