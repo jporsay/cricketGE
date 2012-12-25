@@ -1,5 +1,7 @@
 #pragma once
 
+#include "EventType.h"
+
 namespace event {
 
 class Event {
@@ -8,8 +10,8 @@ private:
 protected:
     Event(short eType) { type = eType; }
 public:
-    short getType() { return type; }
-
+    short getType() const { return type; }
+    bool isOfType(EventType::Type t) const { return type == t; }
 };
 
 }
