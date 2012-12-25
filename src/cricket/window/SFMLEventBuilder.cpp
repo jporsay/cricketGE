@@ -8,7 +8,7 @@
 
 namespace event {
 
-const Event& SFMLEventBuilder::build(sf::Event* e) {
+const Event* SFMLEventBuilder::build(sf::Event* e) const {
     Event* event;
     switch (e->type) {
         case sf::Event::Closed:
@@ -35,10 +35,10 @@ const Event& SFMLEventBuilder::build(sf::Event* e) {
         default:
             break;
     }
-    return *event;
+    return event;
 }
 
-Event* SFMLEventBuilder::buildClosedEvent(sf::Event* rawEvent) {
+Event* SFMLEventBuilder::buildClosedEvent(sf::Event* rawEvent) const {
     Event* event = new event::ClosedEvent();
     return event;
 }
@@ -49,14 +49,14 @@ Event* SFMLEventBuilder::buildResizedEvent(sf::Event* rawEvent) {
     // return event;
 }
 */
-Event* SFMLEventBuilder::buildKeyPressedEvent(sf::Event* rawEvent) {
+Event* SFMLEventBuilder::buildKeyPressedEvent(sf::Event* rawEvent) const {
     event::KeyboardEvent* event = new event::KeyboardEvent();
     event->setState(keyboard::Pressed);
     //event->setKey(keyboard::Key k);
     return static_cast<Event*>(event);
 }
 
-Event* SFMLEventBuilder::buildKeyReleasedEvent(sf::Event* rawEvent) {
+Event* SFMLEventBuilder::buildKeyReleasedEvent(sf::Event* rawEvent) const {
     event::KeyboardEvent* event = new event::KeyboardEvent();
     event->setState(keyboard::Released);
     //event->setKey(keyboard::Key k);
@@ -81,7 +81,7 @@ Event* SFMLEventBuilder::buildMouseButtonReleasedEvent(sf::Event* rawEvent) {
     // return event;
 }
 */
-Event* SFMLEventBuilder::buildDefaultEvent(sf::Event* rawEvent) {
+Event* SFMLEventBuilder::buildDefaultEvent(sf::Event* rawEvent) const {
     Event* event = new event::EmptyEvent();
     return event;
 }
