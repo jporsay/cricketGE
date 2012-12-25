@@ -4,8 +4,8 @@
 #include <map>
 #include <string>
 
-#include "Event.hpp"
-#include "Notifiable.hpp"
+#include "Event.h"
+#include "Notifiable.h"
 
 namespace event {
 

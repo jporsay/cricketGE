@@ -1,10 +1,10 @@
-#include "SFMLEventBuilder.hpp"
+#include "SFMLEventBuilder.h"
 
-#include "../event/ClosedEvent.hpp"
-#include "../event/KeyboardEvent.hpp"
-#include "../event/EmptyEvent.hpp"
+#include "../event/ClosedEvent.h"
+#include "../event/KeyboardEvent.h"
+#include "../event/EmptyEvent.h"
 
-#include "../keyboard/Keys.hpp"
+#include "../keyboard/Keys.h"
 
 namespace event {
 

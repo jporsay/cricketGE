@@ -2,8 +2,8 @@
 
 #include <SFML/Window/Keyboard.hpp>
 
-#include "KeyMapper.hpp"
-#include "Keys.hpp"
+#include "KeyMapper.h"
+#include "Keys.h"
 
 namespace keyboard {
 

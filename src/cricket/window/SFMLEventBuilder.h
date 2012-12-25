@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../event/EventBuilder.hpp"
+#include "../event/EventBuilder.h"
 #include <SFML/Window/Event.hpp>
 
 namespace event {

@@ -1,6 +1,6 @@
-#include "Locator.hpp"
-#include "Sound.hpp"
-#include "NullSound.hpp"
+#include "Locator.h"
+#include "Sound.h"
+#include "NullSound.h"
 
 namespace locator {
 

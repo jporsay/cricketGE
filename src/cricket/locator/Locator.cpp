@@ -1,4 +1,4 @@
-#include "Locator.hpp"
+#include "Locator.h"
 
 namespace locator {
 

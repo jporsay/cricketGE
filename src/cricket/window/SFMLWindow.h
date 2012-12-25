@@ -2,8 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "Window.hpp"
-#include "SFMLEventBuilder.hpp"
+#include "Window.h"
+#include "SFMLEventBuilder.h"
 
 namespace window {
 

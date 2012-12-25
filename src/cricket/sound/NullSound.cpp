@@ -1,4 +1,4 @@
-#include "NullSound.hpp"
+#include "NullSound.h"
 
 namespace sound {
 

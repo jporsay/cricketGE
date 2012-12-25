@@ -1,11 +1,13 @@
-#include "Service.hpp"
+#include "Service.h"
 
 namespace event {
 
 void Service::publish(const Event &e) {
-    for (subscriber_map::iterator mapIterator = subscriberMap.begin(); mapIterator != subscriberMap.end(); mapIterator++) {
+    subscriber_map::iterator mapIterator = subscriberMap.begin();
+    for (; mapIterator != subscriberMap.end(); mapIterator++) {
         subscriber_list* subscribers = mapIterator->second;
-        for (subscriber_list::iterator subscriber = subscribers->begin(); subscriber != subscribers->end(); subscriber++) {
+        subscriber_list::iterator subscriber = subscribers->begin();
+        for (; subscriber != subscribers->end(); subscriber++) {
             (*subscriber)->notify(e);
         }
     }

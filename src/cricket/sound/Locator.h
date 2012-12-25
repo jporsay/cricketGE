@@ -1,6 +1,6 @@
 #pragma once
-#include "../locator/Locator.hpp"
-#include "NullSound.hpp"
+#include "../locator/Locator.h"
+#include "NullSound.h"
 
 namespace sound {
 

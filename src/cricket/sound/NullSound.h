@@ -1,5 +1,5 @@
 #pragma once
-#include "Sound.hpp"
+#include "Sound.h"
 namespace sound {
 
 class NullSound : public Sound {

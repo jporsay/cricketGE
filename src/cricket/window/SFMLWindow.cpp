@@ -1,4 +1,4 @@
-#include "SFMLWindow.hpp"
+#include "SFMLWindow.h"
 
 namespace window {
 

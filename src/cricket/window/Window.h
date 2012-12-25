@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../event/EventBuilder.hpp"
+#include "../event/EventBuilder.h"
 
 namespace window {
 

@@ -1,5 +1,5 @@
-#include "Game.hpp"
-#include "sound/Locator.hpp"
+#include "Game.h"
+#include "sound/Locator.h"
 
 bool Game::initialize() {
     window = new window::SFMLWindow(800, 600, "Cricket GE");
