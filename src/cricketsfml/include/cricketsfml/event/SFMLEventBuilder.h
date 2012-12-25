@@ -5,9 +5,9 @@
 
 namespace event {
 
-class SFMLEventBuilder : public EventBuilder<sf::Event> {
+class SFMLEventBuilder : public EventBuilder {
 public:
-    const Event* build(sf::Event* rawEvent) const;
+    const Event* build(void* rawEvent) const;
 private:
     // Window events
     Event* buildClosedEvent(sf::Event* rawEvent) const;

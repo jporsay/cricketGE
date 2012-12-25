@@ -1,7 +1,7 @@
 #include "AsteroidsGame.h"
 
 int main(int argc, char const *argv[]) {
-    Game<sf::Event> *game = new AsteroidsGame();
+    Game *game = new AsteroidsGame();
     if (!game->initialize()) {
         return 1;
     }

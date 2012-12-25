@@ -2,9 +2,9 @@
 
 #include <cricket/Game.h>
 
-#include "window/SFMLWindow.h"
+#include <cricketsfml/window/SFMLWindow.h>
 
-class AsteroidsGame : public Game<sf::Event> {
+class AsteroidsGame : public Game {
     bool initialize();
     void update();
     void draw();

@@ -2,13 +2,12 @@
 #include "event/Notifiable.h"
 #include "window/Window.h"
 
-template <class T>
 class Game : public event::Notifiable {
 private:
-    window::Window<T>* window;
+    window::Window* window;
 protected:
-    window::Window<T>* getWindow() { return window; }
-    void setWindow(window::Window<T>* w) { window = w; }
+    window::Window* getWindow() { return window; }
+    void setWindow(window::Window* w) { window = w; }
 public:
     explicit Game() {};
 

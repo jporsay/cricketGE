@@ -1,4 +1,4 @@
-#include "SFMLEventBuilder.h"
+#include "../include/cricketsfml/event/SFMLEventBuilder.h"
 
 #include <cricket/event/ClosedEvent.h>
 #include <cricket/event/KeyboardEvent.h>
@@ -7,29 +7,30 @@
 
 namespace event {
 
-const Event* SFMLEventBuilder::build(sf::Event* e) const {
+const Event* SFMLEventBuilder::build(void* e) const {
+    sf::Event* ev = (sf::Event*)e;
     Event* event;
-    switch (e->type) {
+    switch (ev->type) {
         case sf::Event::Closed:
-            event = this->buildClosedEvent(e);
+            event = this->buildClosedEvent(ev);
             break;
 //        case sf::Event::Resized:
-//            event = this->buildResizedEvent(e);
+//            event = this->buildResizedEvent(ev);
 //            break;
         case sf::Event::KeyPressed:
-            event = this->buildKeyPressedEvent(e);
+            event = this->buildKeyPressedEvent(ev);
             break;
         case sf::Event::KeyReleased:
-            event = this->buildKeyReleasedEvent(e);
+            event = this->buildKeyReleasedEvent(ev);
             break;
 /*        case sf::Event::MouseMoved:
-            event = this->buildMouseMovedEvent(e);
+            event = this->buildMouseMovedEvent(ev);
             break;
         case sf::Event::MouseButtonPressed:
-            event = this->buildMouseButtonPressedEvent(e);
+            event = this->buildMouseButtonPressedEvent(ev);
             break;
         case sf::Event::MouseButtonReleased:
-            event = this->buildMouseButtonReleasedEvent(e);
+            event = this->buildMouseButtonReleasedEvent(ev);
             break; */
         default:
             break;

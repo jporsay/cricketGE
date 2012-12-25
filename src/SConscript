@@ -18,7 +18,7 @@ def getAllSubdirs(rootPath, dirs):
 # SCons config
 platform = ARGUMENTS.get('platform', 'linux')
 
-includeDir = ["#/include", "../src/cricket/include"]
+includeDir = ["#/include", "../src/cricket/include", "../src/cricketsfml/include"]
 libDir = "#/libs/" + platform
 srcDir = "src"
 if platform == 'linux':
@@ -36,5 +36,7 @@ env = Environment(
 if platform == 'linux':
     env.Append(CCFLAGS='-DSFML_STATIC')
 # Since we are in bin directory, path should be ../src
-sources = getSources('../src')
-env.Program('tinyWings', sources)
+sources = getSources('../src/cricket')
+sources += getSources('../src/cricketsfml')
+sources += getSources('../src/game')
+env.Program('asteroids', sources)

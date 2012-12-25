@@ -1,6 +1,6 @@
-#include "SFMLWindow.h"
+#include "../include/cricketsfml/window/SFMLWindow.h"
 #include <cricket/event/Service.h>
-#include "SFMLEventBuilder.h"
+#include "../include/cricketsfml/event/SFMLEventBuilder.h"
 
 namespace window {
 
