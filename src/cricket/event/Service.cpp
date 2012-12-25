@@ -2,6 +2,8 @@
 
 namespace event {
 
+Service* Service::service = 0;
+
 void Service::publish(const Event &e) {
     subscriber_map::iterator mapIterator = subscriberMap.begin();
     for (; mapIterator != subscriberMap.end(); mapIterator++) {
