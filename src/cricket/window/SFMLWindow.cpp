@@ -2,9 +2,10 @@
 
 namespace window {
 
-SFMLWindow::SFMLWindow(int width, int height, std::string title) : Window(width, height, title) {
-    _window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Close | sf::Style::Titlebar);
+bool SFMLWindow::initialize() {
+    _window = new sf::RenderWindow(sf::VideoMode(this->getWidth(), this->getHeight()), this->getTitle(), sf::Style::Close | sf::Style::Titlebar);
     _window->setVerticalSyncEnabled(true);
+    return true;
 }
 
 void SFMLWindow::pumpEvents() {
@@ -18,6 +19,10 @@ const event::Event* SFMLWindow::getEvent() const {
         // return newEvent;
     }
     return 0;
+}
+
+bool SFMLWindow::isOpen() const {
+    return _window->isOpen();
 }
 
 void SFMLWindow::clear() {

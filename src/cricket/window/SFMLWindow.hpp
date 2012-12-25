@@ -11,8 +11,9 @@ class SFMLWindow : public Window<sf::Event> {
 private:
     sf::RenderWindow* _window;
 public:
-    SFMLWindow(int w, int h, std::string t);
+    SFMLWindow(int width, int height, std::string title) : Window<sf::Event>(width, height, title) {}
 
+    bool initialize();
     bool isOpen() const;
     const event::Event *getEvent() const;
     void clear();
