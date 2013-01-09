@@ -1,4 +1,4 @@
-#include "AsteroidsGame.h"
+#include <asteroids/AsteroidsGame.h>
 
 #include <typeinfo>
 

@@ -1,4 +1,4 @@
-#include "AsteroidsGame.h"
+#include <asteroids/AsteroidsGame.h>
 
 int main(int argc, char const *argv[]) {
     Game *game = new AsteroidsGame();

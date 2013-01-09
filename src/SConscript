@@ -18,7 +18,7 @@ def getAllSubdirs(rootPath, dirs):
 # SCons config
 platform = ARGUMENTS.get('platform', 'linux')
 
-includeDir = ["#/include", "../src/cricket/include", "../src/cricketsfml/include"]
+includeDir = ["#/include", "../src/cricket/include", "../src/cricketsfml/include", "../src/game/include"]
 libDir = "#/libs/" + platform
 srcDir = "src"
 if platform == 'linux':

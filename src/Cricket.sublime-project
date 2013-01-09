@@ -16,7 +16,8 @@
         "sublimeclang_options":
         [
             "-I${project_folder:0}/include",
-            "-I${project_folder:1}/include"
+            "-I${project_folder:1}/include",
+            "-I${project_folder:2}/include"
         ]
     }
 }
