@@ -34,7 +34,7 @@ env = Environment(
 )
 
 if platform == 'linux':
-    env.Append(CCFLAGS='-DSFML_STATIC')
+    env.Append(CCFLAGS='-DSFML_STATIC -g -std=c++11')
 # Since we are in bin directory, path should be ../src
 sources = getSources('../src/cricket')
 sources += getSources('../src/cricketsfml')
