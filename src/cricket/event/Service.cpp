@@ -12,6 +12,7 @@ void Service::publish(const Event &e) {
             (*subscriber)->notify(e);
         }
     }
+    delete &e;
 }
 
 void Service::subscribe(const event::EventType::Type eventType, Notifiable *subscriber) {
