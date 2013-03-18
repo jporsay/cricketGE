@@ -22,7 +22,7 @@ includeDir = ["#/include", "../src/cricket/include", "../src/cricketsfml/include
 libDir = "#/libs/" + platform
 srcDir = "src"
 if platform == 'linux':
-    libs = ['sfml-graphics-s', 'sfml-window-s', 'sfml-system-s', 'GLEW', 'pthread', 'jpeg', 'freetype', 'Xrandr', 'rt', 'dw']
+    libs = ['sfml-graphics-s', 'sfml-window-s', 'sfml-system-s', 'GLEW', 'pthread', 'jpeg', 'freetype', 'Xrandr', 'rt', 'dw', 'libphysfs']
 else:
     libs = ['sfml-graphics', 'sfml-window', 'sfml-system']
 
