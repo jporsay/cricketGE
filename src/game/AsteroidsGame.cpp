@@ -7,10 +7,19 @@
 #include <iostream>
 
 bool AsteroidsGame::initialize(char const *argv[]) {
+    if (!fs::FS::inst()->initialize("chilogic", "metaroids", "", argv)) {
+        std::cout << fs::FS::inst()->getLastError() << std::endl;
+        return false;
+    }
+    if (!fs::FS::inst()->mount("data", "")) {
+        std::cout << fs::FS::inst()->getLastError() << std::endl;
+        return false;
+    }
     setWindow(new window::SFMLWindow(800, 600, "Metaroids"));
     getWindow()->initialize();
     event::Service::get().subscribe(event::EventType::CLOSE, this);
     event::Service::get().subscribe(event::EventType::KEYBOARD, this);
+
     return true;
 }
 
