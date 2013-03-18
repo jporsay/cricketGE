@@ -24,8 +24,13 @@ bool FS::mount(std::string folder, std::string location, bool absolutePath, bool
     if (!absolutePath) {
         folder = std::string(PHYSFS_getBaseDir()).append(folder);
     }
-    std::cout << folder << std::endl;
     return PHYSFS_mount(folder.c_str(), location.c_str(), appendToSearchPath) != 0;
+}
+
+File* FS::getFile(std::string filePath, FileMode mode) const {
+    File* f = new File(filePath, mode);
+    f->init();
+    return f;
 }
 
 FS::~FS() {

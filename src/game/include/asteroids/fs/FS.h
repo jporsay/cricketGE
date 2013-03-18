@@ -3,6 +3,9 @@
 #include <string>
 
 #include <physfs.h>
+
+#include "File.h"
+
 namespace fs {
 
 class FS {
@@ -14,6 +17,7 @@ public:
     bool initialize(std::string org, std::string appName, std::string archiveExt, char const *argv[]);
     inline const char* getLastError() const { return PHYSFS_getLastError(); };
     bool mount(std::string folder, std::string location, bool absolutePath = false, bool appendToSearchPath = true);
+    File* getFile(std::string filePath, FileMode mode) const;
     ~FS();
 };
 
