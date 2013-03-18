@@ -42,6 +42,11 @@ void SFMLWindow::close() {
     _window->close();
 }
 
+void SFMLWindow::draw(void* s) {
+    graphics::Sprite* sprite = static_cast<graphics::Sprite*>(s);
+    _window->draw(*(sprite->getSprite()));
+}
+
 SFMLWindow::~SFMLWindow() {
     delete _window;
 }
