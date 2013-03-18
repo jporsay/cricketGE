@@ -53,7 +53,7 @@ Event* SFMLEventBuilder::buildResizedEvent(sf::Event* rawEvent) {
 Event* SFMLEventBuilder::buildKeyPressedEvent(sf::Event* rawEvent) const {
     event::KeyboardEvent* event = new event::KeyboardEvent();
     event->setState(keyboard::Pressed);
-    //event->setKey(keyboard::Key k);
+    event->setKey(_keyMapper.getKey(rawEvent->key.code));
     return static_cast<Event*>(event);
 }
 
