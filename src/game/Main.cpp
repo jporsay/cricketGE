@@ -2,7 +2,7 @@
 
 int main(int argc, char const *argv[]) {
     Game *game = new AsteroidsGame();
-    if (!game->initialize()) {
+    if (!game->initialize(argv)) {
         return 1;
     }
     game->run();
