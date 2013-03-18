@@ -9,7 +9,7 @@
 
 #include <iostream>
 
-bool AsteroidsGame::initialize() {
+bool AsteroidsGame::initialize(char const *argv[]) {
     setWindow(new window::SFMLWindow(800, 600, "Cricket GE"));
     getWindow()->initialize();
     event::Service::get().subscribe(event::EventType::CLOSE, this);

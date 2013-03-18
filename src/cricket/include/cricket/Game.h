@@ -18,7 +18,7 @@ public:
             this->draw();
         }
     };
-    virtual bool initialize() = 0;
+    virtual bool initialize(char const *argv[]) = 0;
     virtual void update() = 0;
     virtual void draw() = 0;
     virtual void shutDown() = 0;
