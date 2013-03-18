@@ -2,10 +2,7 @@
 
 #include <typeinfo>
 
-#include <cricket/event/EventType.h>
-#include <cricket/event/Service.h>
-#include <cricket/event/ClosedEvent.h>
-#include <cricket/event/KeyboardEvent.h>
+#include <cricket/event/Events.h>
 
 #include <iostream>
 
