@@ -4,6 +4,7 @@
 
 #include <cricket/window/Window.h>
 #include "../event/SFMLEventBuilder.h"
+#include "../graphics/Sprite.h"
 
 namespace window {
 
