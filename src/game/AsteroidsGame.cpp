@@ -3,8 +3,8 @@
 #include <iostream>
 
 #include <cricket/event/Events.h>
+#include <cricketsfml/graphics/Graphics.h>
 
-#include <iostream>
 
 bool AsteroidsGame::initialize(char const *argv[]) {
     if (!fs::FS::inst()->initialize("chilogic", "metaroids", "", argv)) {
@@ -27,8 +27,13 @@ void AsteroidsGame::update() {
 }
 
 void AsteroidsGame::draw() {
+    fs::File* f = fs::FS::inst()->getFile("/images/starTile.jpg", fs::FILE_READ);
+    graphics::Sprite* s = graphics::Sprite::loadFromMemory(f->getData(), f->getSize());
+    if (s == 0) {
+        std::cout << fs::FS::inst()->getLastError() << std::endl;
+    }
     getWindow()->clear();
-    // draw stuff
+    getWindow()->draw(s);
     getWindow()->display();
 }
 
