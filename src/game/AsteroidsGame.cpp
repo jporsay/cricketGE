@@ -9,7 +9,7 @@
 bool AsteroidsGame::initialize() {
     setWindow(new window::SFMLWindow(800, 600, "Cricket GE"));
     getWindow()->initialize();
-    event::Service::get().subscribe(typeid(event::ClosedEvent), this);
+    event::Service::get().subscribe(event::EventType::CLOSE, this);
     return true;
 }
 

@@ -11,7 +11,7 @@
 namespace event {
 
 typedef std::list<Notifiable*> subscriber_list;
-typedef std::map<std::string, subscriber_list*> subscriber_map;
+typedef std::map<event::EventType::Type, subscriber_list*> subscriber_map;
 
 class Service {
 private:
@@ -26,7 +26,7 @@ public:
         return *service;
     }
     void publish(const Event &e);
-    void subscribe(const std::type_info &eventType, Notifiable *subscriber);
+    void subscribe(const event::EventType::Type, Notifiable *subscriber);
 };
 
 }
