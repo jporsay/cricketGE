@@ -6,11 +6,11 @@ namespace event {
 
 class Event {
 private:
-    short type;
+    event::EventType::Type type = event::EventType::EMPTY;
 protected:
-    Event(short eType) { type = eType; }
+    Event(event::EventType::Type eType) { type = eType; }
 public:
-    short getType() const { return type; }
+    const event::EventType::Type getType() const { return type; }
     bool isOfType(EventType::Type t) const { return type == t; }
 };
 
