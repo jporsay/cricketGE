@@ -7,7 +7,7 @@
 #include <iostream>
 
 bool AsteroidsGame::initialize(char const *argv[]) {
-    setWindow(new window::SFMLWindow(800, 600, "Cricket GE"));
+    setWindow(new window::SFMLWindow(800, 600, "Metaroids"));
     getWindow()->initialize();
     event::Service::get().subscribe(event::EventType::CLOSE, this);
     event::Service::get().subscribe(event::EventType::KEYBOARD, this);
