@@ -19,6 +19,7 @@ public:
     void clear();
     void display();
     void close();
+    void draw(void* s);
     void pumpEvents();
 
     ~SFMLWindow();

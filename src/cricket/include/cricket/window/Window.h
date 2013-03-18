@@ -13,7 +13,7 @@ private:
     std::string title;
     event::EventBuilder* eventBuilder;
 public:
-    Window(int w, int h, std::string t) : 
+    Window(int w, int h, std::string t) :
         width(w),
         height(h),
         title(t),
@@ -25,6 +25,7 @@ public:
     virtual const event::Event *getEvent() const = 0;
     virtual void clear() = 0;
     virtual void display() = 0;
+    virtual void draw(void*) = 0;
     virtual void close() = 0;
     virtual void pumpEvents() = 0;
 
