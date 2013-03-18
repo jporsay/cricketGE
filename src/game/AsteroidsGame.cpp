@@ -1,6 +1,5 @@
 #include <asteroids/AsteroidsGame.h>
 
-#include <typeinfo>
 
 #include <cricket/event/Events.h>
 
