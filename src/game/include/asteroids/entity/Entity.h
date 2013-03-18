@@ -1,6 +1,7 @@
-#pragma once 
+#pragma once
 
 #include <asteroids/component/Component.h>
+#include <string>
 #include <map>
 
 namespace entity {
@@ -10,7 +11,7 @@ private:
     std::map<std::string, component::Component*> _components;
 public:
     void addComponent(std::string name, component::Component newComponent) {
-        _components.insert(new std::pair<std::string, component::Component>(name, newComponent));
+        _components.insert(new std::pair<std::string, component::Component*>(name, &newComponent));
     }
 };
 
