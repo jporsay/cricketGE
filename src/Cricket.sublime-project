@@ -17,7 +17,8 @@
         [
             "-I${project_folder:0}/include",
             "-I${project_folder:1}/include",
-            "-I${project_folder:2}/include"
+            "-I${project_folder:2}/include",
+            "-Wno-c++11-extensions"
         ]
     }
 }
