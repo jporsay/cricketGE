@@ -1,5 +1,6 @@
 #include <asteroids/AsteroidsGame.h>
 
+#include <iostream>
 
 #include <cricket/event/Events.h>
 
