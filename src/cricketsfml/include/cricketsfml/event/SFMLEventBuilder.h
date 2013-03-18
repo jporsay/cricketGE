@@ -2,10 +2,13 @@
 
 #include <cricket/event/EventBuilder.h>
 #include <SFML/Window/Event.hpp>
+#include <cricketsfml/keyboard/SFMLKeyMapper.h>
 
 namespace event {
 
 class SFMLEventBuilder : public EventBuilder {
+private:
+    keyboard::SFMLKeyMapper _keyMapper;
 public:
     const Event* build(void* rawEvent) const;
 private:
