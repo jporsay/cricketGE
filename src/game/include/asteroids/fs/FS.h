@@ -14,6 +14,7 @@ public:
     bool initialize(std::string org, std::string appName, std::string archiveExt, char const *argv[]);
     inline const char * getLastError() { return PHYSFS_getLastError(); };
     bool mount(std::string folder, std::string location, bool absolutePath = false, bool appendToSearchPath = true);
+    ~FS();
 };
 
 }

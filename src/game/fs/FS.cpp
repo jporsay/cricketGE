@@ -28,4 +28,8 @@ bool FS::mount(std::string folder, std::string location, bool absolutePath, bool
     return PHYSFS_mount(folder.c_str(), location.c_str(), appendToSearchPath) != 0;
 }
 
+FS::~FS() {
+    PHYSFS_deinit();
+}
+
 }
