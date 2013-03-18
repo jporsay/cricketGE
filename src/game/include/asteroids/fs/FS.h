@@ -12,7 +12,7 @@ private:
 public:
     static FS* inst() {if (_instance == 0) _instance = new FS(); return _instance;}
     bool initialize(std::string org, std::string appName, std::string archiveExt, char const *argv[]);
-    inline const char * getLastError() { return PHYSFS_getLastError(); };
+    inline const char* getLastError() const { return PHYSFS_getLastError(); };
     bool mount(std::string folder, std::string location, bool absolutePath = false, bool appendToSearchPath = true);
     ~FS();
 };
