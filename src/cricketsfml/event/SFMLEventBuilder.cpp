@@ -33,6 +33,7 @@ const Event* SFMLEventBuilder::build(void* e) const {
             event = this->buildMouseButtonReleasedEvent(ev);
             break; */
         default:
+            event = this->buildDefaultEvent(ev);
             break;
     }
     return event;
