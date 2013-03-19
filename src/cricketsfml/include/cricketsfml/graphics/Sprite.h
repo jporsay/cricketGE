@@ -5,6 +5,8 @@
 
 #include <cricketsfml/graphics/Graphics.h>
 
+#include <iostream>
+
 namespace window {
     class SFMLWindow;
 }
@@ -44,7 +46,12 @@ public:
 
     inline static Sprite* loadFromMemory(const char* data, uint64_t size) {
         sf::Texture t;
-        if (data == 0 || !t.loadFromMemory(data, size)) {
+        if (data == 0) {
+            std::cout << "failed to load sprite from memory: empty data" << std::endl;
+            return 0;
+        }
+        if (!t.loadFromMemory(data, size)) {
+            std::cout << "failed to load sprite from memory: t.loadFromMemory failed" << std::endl;
             return 0;
         }
         Sprite* s = new Sprite();
