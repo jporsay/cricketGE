@@ -11,10 +11,15 @@ bool File::init() {
     if (_pfsFile != 0) {
         return true;
     }
-
-    if (_mode == FILE_READ) _pfsFile = PHYSFS_openRead(_fileName.c_str());
-    else if (_mode == FILE_APPEND) _pfsFile = PHYSFS_openAppend(_fileName.c_str());
-    else if (_mode == FILE_WRITE) _pfsFile = PHYSFS_openWrite(_fileName.c_str());
+    if (_mode == FILE_READ) {
+        _pfsFile = PHYSFS_openRead(_fileName.c_str());
+    } else if (_mode == FILE_APPEND) {
+        _pfsFile = PHYSFS_openAppend(_fileName.c_str());
+    } else if (_mode == FILE_WRITE) {
+        _pfsFile = PHYSFS_openWrite(_fileName.c_str());
+    } else {
+        _pfsFile = NULL;
+    }
 
     bool ret = _pfsFile != 0;
     if (ret) {
