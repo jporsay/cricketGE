@@ -21,8 +21,8 @@ bool File::init() {
         _pfsFile = NULL;
     }
 
-    bool ret = _pfsFile != 0;
-    if (ret) {
+    bool ret = _pfsFile != NULL;
+    if (_pfsFile != NULL) {
         _size = PHYSFS_fileLength(_pfsFile);
     }
     return ret;
