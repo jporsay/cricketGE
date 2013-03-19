@@ -29,7 +29,9 @@ bool FS::mount(std::string folder, std::string location, bool absolutePath, bool
 
 File* FS::getFile(std::string filePath, FileMode mode) const {
     File* f = new File(filePath, mode);
-    f->init();
+    if (!f->init()) {
+        return 0;
+    }
     return f;
 }
 
