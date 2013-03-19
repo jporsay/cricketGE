@@ -23,6 +23,7 @@ bool AsteroidsGame::initialize(char const *argv[]) {
 
     fs::File* f = fs::FS::inst()->getFile("images/starTile.jpg", fs::FILE_READ);
     s = graphics::Sprite::loadFromMemory(f->getData(), f->getSize());
+    delete f;
     if (s == 0) {
         std::cout << "Error! " << fs::FS::inst()->getLastError() << std::endl;
     }
