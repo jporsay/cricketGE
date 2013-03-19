@@ -39,6 +39,7 @@ void AsteroidsGame::draw() {
 }
 
 void AsteroidsGame::shutDown() {
+    fs::FS::inst()->shutDown();
     getWindow()->close();
 }
 

@@ -35,8 +35,11 @@ File* FS::getFile(std::string filePath, FileMode mode) const {
     return f;
 }
 
-FS::~FS() {
+void FS::shutDown() {
     PHYSFS_deinit();
+}
+
+FS::~FS() {
 }
 
 }
