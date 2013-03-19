@@ -1,5 +1,7 @@
 #include <asteroids/fs/File.h>
 
+#include <iostream>
+
 namespace fs {
 
 File::File(std::string fileName, FileMode mode) :
@@ -37,7 +39,7 @@ const char* File::getData() const {
 }
 
 File::~File() {
-
+    PHYSFS_close(_pfsFile);
 }
 
 }
