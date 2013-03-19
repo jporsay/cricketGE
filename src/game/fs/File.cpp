@@ -36,4 +36,8 @@ const char* File::getData() const {
     return data;
 }
 
+File::~File() {
+
+}
+
 }
