@@ -16,7 +16,7 @@ typedef enum {
 
 class File {
 private:
-    PHYSFS_File *_pfsFile;
+    PHYSFS_File *_pfsFile = 0;
     std::string _fileName;
     FileMode _mode;
     uint64_t _size;
