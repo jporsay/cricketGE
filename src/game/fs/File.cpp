@@ -32,7 +32,8 @@ bool File::init() {
 
 const char* File::getData() const {
     char * data = new char[this->getSize()];
-    if (PHYSFS_read(_pfsFile, data, 1, this->getSize()) != 1) {
+    int read = PHYSFS_read(_pfsFile, data, 1, this->getSize());
+    if (read != this->getSize()) {
         return 0;
     }
     return data;
