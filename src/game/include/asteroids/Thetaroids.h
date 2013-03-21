@@ -4,8 +4,11 @@
 
 #include <cricketsfml/window/SFMLWindow.h>
 #include <asteroids/fs/FS.h>
+#include <asteroids/config/ConfigLoader.h>
 
 class Thetaroids : public Game {
+private:
+    config::Config* config;
 public:
     bool initialize(char const *argv[]);
     void update();
@@ -16,4 +19,5 @@ public:
 private:
     bool initServices(char const *argv[]);
     void suscribeToEvents();
+    bool loadConfig();
 };

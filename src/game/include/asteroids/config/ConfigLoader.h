@@ -9,6 +9,8 @@ namespace config {
 class ConfigLoader {
 public:
     Config* load(const char* config);
+private:
+    void loadWindow(Json::Value& root, Config* conf);
 };
 
 }
