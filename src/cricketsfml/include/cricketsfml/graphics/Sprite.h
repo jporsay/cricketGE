@@ -48,10 +48,10 @@ public:
     inline static Sprite* loadFromFile(const std::string filePath) {
         if (!filePath.empty()) {
             std::cout << "loading: " << filePath << std::endl;
-            sf::Texture t;
-            t.loadFromFile(filePath);
+            sf::Texture *t = new sf::Texture();
+            t->loadFromFile(filePath);
             Sprite* s = new Sprite();
-            s->setSprite(new sf::Sprite(t));
+            s->setSprite(new sf::Sprite(*t));
             return s;
         }
         return 0;
