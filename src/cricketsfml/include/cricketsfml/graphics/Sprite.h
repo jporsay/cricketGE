@@ -44,6 +44,18 @@ public:
     void scale(FloatPoint p);
     FloatPoint getScale() const;
 
+    inline static Sprite* loadFromFile(const std::string filePath) {
+        if (!filePath.empty()) {
+            std::cout << "loading: " << filePath << std::endl;
+            sf::Texture t;
+            t.loadFromFile(filePath);
+            Sprite* s = new Sprite();
+            s->setSprite(new sf::Sprite(t));
+            return s;
+        }
+        return 0;
+    }
+
     inline static Sprite* loadFromMemory(const char* data, uint64_t size) {
         if (data == 0) {
             std::cout << "failed to load sprite from memory: empty data" << std::endl;
