@@ -45,17 +45,19 @@ public:
     FloatPoint getScale() const;
 
     inline static Sprite* loadFromMemory(const char* data, uint64_t size) {
-        sf::Texture t;
         if (data == 0) {
             std::cout << "failed to load sprite from memory: empty data" << std::endl;
             return 0;
         }
-        if (!t.loadFromMemory(data, size)) {
+        sf::Texture* t = new sf::Texture();
+        if (!t->loadFromMemory(data, size)) {
             std::cout << "failed to load sprite from memory: t.loadFromMemory failed" << std::endl;
             return 0;
         }
         Sprite* s = new Sprite();
-        s->setSprite(new sf::Sprite(t));
+        sf::Sprite* sf = new sf::Sprite();
+        sf->setTexture(*t);
+        s->setSprite(sf);
         return s;
     }
 };
