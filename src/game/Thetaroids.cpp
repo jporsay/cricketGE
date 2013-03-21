@@ -5,8 +5,6 @@
 #include <cricket/event/Events.h>
 #include <cricketsfml/graphics/Graphics.h>
 
-graphics::Sprite* s;
-
 bool Thetaroids::initialize(char const *argv[]) {
     if (!this->initServices(argv)) {
         return false;
@@ -15,12 +13,11 @@ bool Thetaroids::initialize(char const *argv[]) {
     return true;
 }
 
-void Thetaroids::update() {
-}
+void Thetaroids::update() {}
 
 void Thetaroids::draw() {
     this->getWindow()->clear();
-    // draw everything
+    // draw
     this->getWindow()->display();
 }
 
@@ -54,8 +51,8 @@ bool Thetaroids::initServices(char const *argv[]) {
         std::cout << fs::FS::inst()->getLastError() << std::endl;
         return false;
     }
-    setWindow(new window::SFMLWindow(800, 600, "Thetaroids"));
-    getWindow()->initialize();
+    this->setWindow(new window::SFMLWindow(800, 600, "Thetaroids"));
+    this->getWindow()->initialize();
 
     // FS
     if (!fs::FS::inst()->mount("data")) {
