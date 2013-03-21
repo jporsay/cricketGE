@@ -58,7 +58,7 @@ bool Thetaroids::initServices(char const *argv[]) {
     getWindow()->initialize();
 
     // FS
-    if (!fs::FS::inst()->mount("data", "")) {
+    if (!fs::FS::inst()->mount("data")) {
         std::cout << fs::FS::inst()->getLastError() << std::endl;
         return false;
     }
