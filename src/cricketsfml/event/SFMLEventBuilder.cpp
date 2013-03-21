@@ -1,8 +1,6 @@
 #include "../include/cricketsfml/event/SFMLEventBuilder.h"
 
-#include <cricket/event/ClosedEvent.h>
-#include <cricket/event/KeyboardEvent.h>
-#include <cricket/event/EmptyEvent.h>
+#include <cricket/event/Events.h>
 #include <cricket/keyboard/Keys.h>
 
 namespace event {
