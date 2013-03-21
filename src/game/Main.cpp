@@ -1,7 +1,7 @@
-#include <asteroids/AsteroidsGame.h>
+#include <asteroids/Thetaroids.h>
 
 int main(int argc, char const *argv[]) {
-    Game *game = new AsteroidsGame();
+    Game *game = new Thetaroids();
     if (!game->initialize(argv)) {
         return 1;
     }
