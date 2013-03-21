@@ -18,6 +18,7 @@ public:
     inline const char* getLastError() const { return PHYSFS_getLastError(); };
     bool mount(std::string folder, std::string location, bool absolutePath = false, bool appendToSearchPath = true);
     File* getFile(std::string filePath, FileMode mode) const;
+    const std::string getRealFilePath(std::string file) const;
     void shutDown();
     ~FS();
 };
