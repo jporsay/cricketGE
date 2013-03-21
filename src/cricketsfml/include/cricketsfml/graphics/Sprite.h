@@ -24,6 +24,7 @@ private:
     Sprite() {};
     void setSprite(sf::Sprite* sprite) { _sprite = sprite; }
     sf::Sprite* getSprite() const { return _sprite; }
+    const sf::Sprite& getSprite() {return *_sprite; }
 
 public:
     void setRect(IntRect r);
