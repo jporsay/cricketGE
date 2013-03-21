@@ -11,7 +11,9 @@ const Config* load(const char* config) {
     if (!reader.parse(config, root)) {
         return 0;
     }
+    Config* conf = new Config();
 
+    return conf;
 }
 
 }
